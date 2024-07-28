@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submitted Data</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/cart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-5">Submitted Data</h2>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Address 2</th>
+          <th>Country</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Payment Method</th>
+          <th>Card Name</th>
+          <th>Card Number</th>
+          <th>Expiration</th>
+          <th>CVV</th>
+          <th>Paid</th>
+        </tr>
+      </thead>
+      <tbody id="dataList">
+        <!-- JavaScript will populate this -->
+
+      </tbody>
+    </table>
+  </div>
+  <script src="form-validation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const dataList = document.getElementById('dataList');
+  const data = JSON.parse(localStorage.getItem('formData'));
+  const totalCost = localStorage.getItem('totalCost') || '0.00';
+
+  if (data) {
+    const row = document.createElement('tr');
+    Object.values(data).forEach(value => {
+      const cell = document.createElement('td');
+      cell.textContent = value;
+      row.appendChild(cell);
+    });
+
+    // Add total cost cell
+    const totalCostCell = document.createElement('td');
+    totalCostCell.id = 'total-cost-display';
+    totalCostCell.textContent = totalCost;
+    row.appendChild(totalCostCell);
+
+    dataList.appendChild(row);
+  } else {
+    const row = document.createElement('tr');
+    const cell = document.createElement('td');
+    cell.colSpan = 14;
+    cell.textContent = 'No data available.';
+    row.appendChild(cell);
+    dataList.appendChild(row);
+  }
+});
+
+
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const totalCost = localStorage.getItem('totalCost');
+            document.getElementById('total-cost-display').textContent = totalCost;
+        });
+  </script>
+</body>
+</html>

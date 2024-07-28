@@ -1,0 +1,25 @@
+/*cover img for product*/
+
+.myimg{
+    display: flex;
+    margin: auto auto;
+    padding-top: 100px;
+}
+
+.myfrontimg{
+  height: 330px;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.container{
+  max-width: 960px;
+}
+
+
+.card-text{
+  font-size: 1.3em;
+}
+/*------------------------------------------------*/

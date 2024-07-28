@@ -1,0 +1,64 @@
+body{
+    overflow-x: hidden;
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: black;
+}
+
+path{
+    color: black;
+}
+
+circle{
+    color: black;
+}
+
+.text-bg-primary {
+    color: #fff !important;
+    background-color: #212529
+  }
+
+
+#racket1, #racket2, #racket3,
+ #racket4, #racket5, #racket6,
+ #shuttercock1, #tenniesball1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+.cart-icon{
+    fill: white;
+}
+
+.top-row{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mytitle{
+    color: rgba(255, 255, 255, 0.858);
+    text-align: center;
+    background-color: rgb(23, 23, 23);
+    width: 96%;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.rec{
+    font-family: var(--bs-body-font-family);
+    font-weight: bold;
+    font-size: 3rem;
+}
